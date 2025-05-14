@@ -24,7 +24,7 @@
             font-family: "Orbitron", sans-serif;
         }
         .gradient-text {
-            background: linear-gradient(45deg, #FFD700, #B8860B);
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -69,7 +69,7 @@
             height: 2px;
             bottom: -2px;
             left: 0;
-            background: linear-gradient(45deg, #FFD700, #B8860B);
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
             transition: width 0.3s ease;
         }
         .nav-link:hover::after {
@@ -100,6 +100,26 @@
             left: -9px;
             z-index: 10;
         }
+        .island-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .island-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
     </style>
 </head>
 <body class="bg-black text-white">
@@ -115,23 +135,23 @@
                 </button>
                 <!-- Desktop menu -->
                 <div class="hidden md:flex space-x-8">
-                    <a class="nav-link text-sm font-medium hover:text-yellow-500 transition" href="../index.html">Home</a>
-                    <a class="nav-link text-sm font-medium hover:text-yellow-500 transition" href="../about/index.html">About</a>
-                    <a class="nav-link text-sm font-medium hover:text-yellow-500 transition" href="../contact/index.html">Contact</a>
-                    <a class="nav-link text-sm font-medium text-yellow-500" href="#">Events</a>
-                    <a class="nav-link text-sm font-medium hover:text-yellow-500 transition" href="../blog/index.html">Blog</a>
-                    <a class="nav-link text-sm font-medium hover:text-yellow-500 transition" href="../newsletter/index.html">Newsletter</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../index.html">Home</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../about/index.html">About</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../contact/index.html">Contact</a>
+                    <a class="nav-link text-sm font-medium text-pink-500" href="#">Events</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../blog/index.html">Blog</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../newsletter/index.html">Newsletter</a>
                 </div>
             </div>
             <!-- Mobile menu -->
             <div class="md:hidden hidden" id="mobile-menu">
                 <div class="flex flex-col space-y-4 pt-4 pb-2">
-                    <a class="nav-link text-sm font-medium hover:text-yellow-500 transition" href="../index.html">Home</a>
-                    <a class="nav-link text-sm font-medium hover:text-yellow-500 transition" href="../about/index.html">About</a>
-                    <a class="nav-link text-sm font-medium hover:text-yellow-500 transition" href="../contact/index.html">Contact</a>
-                    <a class="nav-link text-sm font-medium text-yellow-500" href="#">Events</a>
-                    <a class="nav-link text-sm font-medium hover:text-yellow-500 transition" href="../blog/index.html">Blog</a>
-                    <a class="nav-link text-sm font-medium hover:text-yellow-500 transition" href="../newsletter/index.html">Newsletter</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../index.html">Home</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../about/index.html">About</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../contact/index.html">Contact</a>
+                    <a class="nav-link text-sm font-medium text-pink-500" href="#">Events</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../blog/index.html">Blog</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../newsletter/index.html">Newsletter</a>
                 </div>
             </div>
         </div>
