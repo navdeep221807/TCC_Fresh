@@ -1,0 +1,186 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>The Catalyst Club</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Roboto", sans-serif;
+        }
+        .orbitron {
+            font-family: "Orbitron", sans-serif;
+        }
+        .hero-img {
+            transform: scale(1.70);
+            filter: brightness(1.1);
+            margin-top: 5%;
+        }
+        @media (max-width: 768px) {
+            .hero-img {
+                transform: scale(1.25);
+                margin-top: 15%;
+            }
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .island-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .island-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-effect">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="orbitron text-2xl font-extrabold tracking-widest gradient-text">TCC</span>
+                </a>
+                <!-- Mobile menu button -->
+                <button class="md:hidden text-white focus:outline-none" id="mobile-menu-button">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                <!-- Desktop menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a class="nav-link text-sm font-medium text-pink-500" href="#">Home</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="about/index.html">About</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="contact/index.html">Contact</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="blog/index.html">Blog</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="newsletter/index.html">Newsletter</a>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 pt-4 pb-2">
+                    <a class="nav-link text-sm font-medium text-pink-500" href="#">Home</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="about/index.html">About</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="contact/index.html">Contact</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="blog/index.html">Blog</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="newsletter/index.html">Newsletter</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-screen w-full overflow-hidden">
+        <img src="TCC logo(1).png" alt="Catalyst Club Logo" class="absolute inset-0 w-full h-full object-contain object-center hero-img z-0"/>
+        <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+        <div class="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
+            <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-2 mb-8 md:mb-12">
+                <span class="orbitron text-4xl md:text-5xl font-extrabold tracking-widest gradient-text">The</span>
+                <span class="orbitron text-4xl md:text-5xl font-extrabold tracking-widest gradient-text">Catalyst</span>
+                <span class="orbitron text-4xl md:text-5xl font-light tracking-wide gradient-text">Club</span>
+            </div>
+            <div class="max-w-lg space-y-4 md:space-y-6">
+                <h1 class="text-2xl md:text-4xl font-light leading-relaxed">
+                    Chemistry in Motion: <br/>
+                    Where Science Meets Innovation
+                </h1>
+                <p class="text-xs md:text-sm font-light text-gray-300">
+                    The Catalyst Club is a student-driven organization dedicated to promoting chemistry education, fostering scientific curiosity, and creating opportunities for hands-on learning through interactive demonstrations and research.
+                </p>
+                <a href="about/index.html" class="inline-block bg-pink-600 text-white text-xs font-bold rounded-full px-6 md:px-8 py-2 md:py-3 tracking-widest hover:bg-pink-700 transition duration-300">
+                    ABOUT US
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 px-4">
+        <div class="container mx-auto">
+            <h2 class="orbitron text-3xl font-bold text-center gradient-text mb-16">Our Pillars</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Education Island -->
+                <div class="island-card rounded-lg p-8 text-center">
+                    <div class="icon-circle">
+                        <i class="fas fa-graduation-cap text-3xl text-white"></i>
+                    </div>
+                    <h3 class="orbitron text-xl font-bold mb-4 gradient-text">Education</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        We provide hands-on learning experiences through workshops, lab sessions, and interactive demonstrations. Our goal is to make chemistry accessible and engaging for all students, regardless of their background.
+                    </p>
+                </div>
+
+                <!-- Community Island -->
+                <div class="island-card rounded-lg p-8 text-center">
+                    <div class="icon-circle">
+                        <i class="fas fa-users text-3xl text-white"></i>
+                    </div>
+                    <h3 class="orbitron text-xl font-bold mb-4 gradient-text">Community</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Join a vibrant community of chemistry enthusiasts. We foster collaboration, mentorship, and networking opportunities among students, faculty, and industry professionals.
+                    </p>
+                </div>
+
+                <!-- Events Island -->
+                <div class="island-card rounded-lg p-8 text-center">
+                    <div class="icon-circle">
+                        <i class="fas fa-calendar-alt text-3xl text-white"></i>
+                    </div>
+                    <h3 class="orbitron text-xl font-bold mb-4 gradient-text">Events</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        We make chemistry fun and accessible through public demos, hands-on activities, and interactive sessions. Our club sparks curiosity, supports learning, and connects students with seminars, guest lectures, and career opportunities in chemistry.
+                    </p>
+                    <p class="text-gray-300 text-sm leading-relaxed mt-4">
+                        We provide assistance in the field of chemistry and encourage an atmosphere to exchange thoughts and ideas. Our events include seminars, visiting lecturers, and information about numerous job opportunities in chemistry.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

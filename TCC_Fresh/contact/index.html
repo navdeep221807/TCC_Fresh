@@ -1,0 +1,196 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Contact Us - The Catalyst Club</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Roboto", sans-serif;
+            overflow-x: hidden;
+        }
+        .orbitron {
+            font-family: "Orbitron", sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .bubble {
+            animation: float 3s ease-in-out infinite;
+        }
+        .pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .rotate {
+            animation: rotate 10s linear infinite;
+        }
+        .slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-effect">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="flex items-center space-x-2">
+                    <span class="orbitron text-2xl font-extrabold tracking-widest gradient-text">TCC</span>
+                </a>
+                <!-- Mobile menu button -->
+                <button class="md:hidden text-white focus:outline-none" id="mobile-menu-button">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                <!-- Desktop menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../index.html">Home</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../about/index.html">About</a>
+                    <a class="nav-link text-sm font-medium text-pink-500" href="#">Contact</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../blog/index.html">Blog</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../newsletter/index.html">Newsletter</a>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 pt-4 pb-2">
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../index.html">Home</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../about/index.html">About</a>
+                    <a class="nav-link text-sm font-medium text-pink-500" href="#">Contact</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../blog/index.html">Blog</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../newsletter/index.html">Newsletter</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-16 pt-32">
+        <div class="max-w-4xl mx-auto">
+            <div class="relative mb-12">
+                <div class="rotate absolute inset-0 flex items-center justify-center">
+                    <div class="w-32 h-32 rounded-full border-4 border-pink-500 border-opacity-20"></div>
+                </div>
+                <div class="bubble relative z-10 text-center">
+                    <i class="fas fa-address-book text-7xl text-pink-500"></i>
+                </div>
+            </div>
+            <h1 class="orbitron text-4xl font-bold mb-12 text-center gradient-text">Contact Us</h1>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card glass-effect rounded-lg p-8">
+                    <h2 class="orbitron text-2xl font-bold mb-6 gradient-text">Get in Touch</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-pink-600 p-3 rounded-full pulse">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold">Email</h3>
+                                <a href="mailto:catalyst@vit.ac.in" class="text-gray-300 hover:text-pink-500 transition">catalyst@vit.ac.in</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card glass-effect rounded-lg p-8">
+                    <h2 class="orbitron text-2xl font-bold mb-6 gradient-text">Visit Us</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-pink-600 p-3 rounded-full pulse">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold">Address</h3>
+                                <p class="text-gray-300">Vellore Institute of Technology, VIT, Vellore Campus, Tiruvalam Rd, Katpadi, Vellore, Tamil Nadu 632014</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card glass-effect rounded-lg p-8">
+                    <h2 class="orbitron text-2xl font-bold mb-6 gradient-text">Follow Us</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-pink-600 p-3 rounded-full pulse">
+                                <i class="fab fa-instagram text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold">Instagram</h3>
+                                <a href="https://www.instagram.com/thecatalystclubvit/" target="_blank" class="text-gray-300 hover:text-pink-500 transition">@thecatalystclubvit</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-pink-600 p-3 rounded-full pulse" style="animation-delay: 0.2s;">
+                                <i class="fab fa-linkedin text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold">LinkedIn</h3>
+                                <a href="https://www.linkedin.com/in/the-catalyst-club-vit-756b9926a/" target="_blank" class="text-gray-300 hover:text-pink-500 transition">The Catalyst Club VIT</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html> 
