@@ -11,7 +11,7 @@
             margin: 0;
             font-family: "Roboto", sans-serif;
             overflow-x: hidden;
-            background: linear-gradient(135deg, #000000, #1a1a1a, #000000);
+            background: linear-gradient(135deg, #1a0000, #000000, #1a0000);
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
         }
@@ -89,12 +89,12 @@
         }
         .calendar-line {
             width: 2px;
-            background: linear-gradient(to bottom, transparent, #FFD700, transparent);
+            background: linear-gradient(to bottom, transparent, #ff6b6b, transparent);
         }
         .calendar-dot {
             width: 20px;
             height: 20px;
-            background: linear-gradient(45deg, #FFD700, #B8860B);
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
             border-radius: 50%;
             position: absolute;
             left: -9px;
@@ -161,146 +161,45 @@
         <div class="max-w-4xl mx-auto">
             <div class="relative mb-12">
                 <div class="rotate absolute inset-0 flex items-center justify-center">
-                    <div class="w-32 h-32 rounded-full border-4 border-yellow-500 border-opacity-20"></div>
+                    <div class="w-32 h-32 rounded-full border-4 border-pink-500 border-opacity-20"></div>
                 </div>
                 <div class="bubble relative z-10 text-center">
-                    <i class="fas fa-calendar-alt text-7xl text-yellow-500"></i>
+                    <i class="fas fa-calendar-alt text-7xl text-pink-500"></i>
                 </div>
             </div>
             <h1 class="orbitron text-4xl font-bold mb-8 text-center gradient-text">Upcoming Events</h1>
-            
             <div class="glass-effect rounded-lg p-8 mb-8">
                 <p class="text-gray-300 leading-relaxed text-center mb-12">
-                    Join us for exciting chemistry events, workshops, and demonstrations. Our events provide hands-on experience and opportunities to explore the fascinating world of chemistry.
+                    We're brewing up something special! Stay tuned—exciting upcoming events will be announced soon!
                 </p>
-
-                <!-- Timeline of Events -->
-                <div class="relative">
-                    <!-- Timeline Line -->
-                    <div class="calendar-line absolute left-0 top-0 bottom-0 ml-0.5 hidden md:block"></div>
-
-                    <!-- Events -->
-                    <div class="space-y-16">
-                        <!-- Event 1 -->
-                        <div class="md:ml-12 relative">
-                            <div class="calendar-dot hidden md:block"></div>
-                            <div class="event-card glass-effect rounded-lg p-6">
-                                <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                                    <h3 class="orbitron text-xl font-bold gradient-text">Chemistry Magic Show</h3>
-                                    <div class="flex items-center mt-2 md:mt-0">
-                                        <span class="bg-yellow-600 text-white text-xs px-3 py-1 rounded-full">
-                                            <i class="far fa-calendar-alt mr-1"></i> June 15, 2025
-                                        </span>
-                                    </div>
-                                </div>
-                                <p class="text-gray-300 mb-4">
-                                    Join us for an exciting chemistry magic show featuring colorful reactions, bubbling potions, and exciting demonstrations that showcase the wonders of chemistry.
-                                </p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="text-xs bg-gray-700 px-2 py-1 rounded">Interactive</span>
-                                    <span class="text-xs bg-gray-700 px-2 py-1 rounded">Family-friendly</span>
-                                    <span class="text-xs bg-gray-700 px-2 py-1 rounded">Educational</span>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-sm text-gray-400">
-                                        <i class="fas fa-map-marker-alt mr-1"></i> Science Building, Room 101
-                                    </span>
-                                    <a href="#" class="text-yellow-500 hover:text-yellow-400 transition">
-                                        Learn more <i class="fas fa-arrow-right ml-1"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Event 2 -->
-                        <div class="md:ml-12 relative">
-                            <div class="calendar-dot hidden md:block"></div>
-                            <div class="event-card glass-effect rounded-lg p-6">
-                                <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                                    <h3 class="orbitron text-xl font-bold gradient-text">Nobel Prize Chemistry Workshop</h3>
-                                    <div class="flex items-center mt-2 md:mt-0">
-                                        <span class="bg-yellow-600 text-white text-xs px-3 py-1 rounded-full">
-                                            <i class="far fa-calendar-alt mr-1"></i> July 10, 2025
-                                        </span>
-                                    </div>
-                                </div>
-                                <p class="text-gray-300 mb-4">
-                                    Explore the groundbreaking discoveries that earned the 2024 Nobel Prize in Chemistry. This workshop will dive into the scientific principles behind the award-winning research.
-                                </p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="text-xs bg-gray-700 px-2 py-1 rounded">Advanced</span>
-                                    <span class="text-xs bg-gray-700 px-2 py-1 rounded">Workshop</span>
-                                    <span class="text-xs bg-gray-700 px-2 py-1 rounded">Research</span>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-sm text-gray-400">
-                                        <i class="fas fa-map-marker-alt mr-1"></i> Chemistry Lab, Room 305
-                                    </span>
-                                    <a href="#" class="text-yellow-500 hover:text-yellow-400 transition">
-                                        Learn more <i class="fas fa-arrow-right ml-1"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Event 3 -->
-                        <div class="md:ml-12 relative">
-                            <div class="calendar-dot hidden md:block"></div>
-                            <div class="event-card glass-effect rounded-lg p-6">
-                                <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                                    <h3 class="orbitron text-xl font-bold gradient-text">Green Chemistry Symposium</h3>
-                                    <div class="flex items-center mt-2 md:mt-0">
-                                        <span class="bg-yellow-600 text-white text-xs px-3 py-1 rounded-full">
-                                            <i class="far fa-calendar-alt mr-1"></i> August 5, 2025
-                                        </span>
-                                    </div>
-                                </div>
-                                <p class="text-gray-300 mb-4">
-                                    A day-long symposium focused on sustainable chemistry practices. Learn about environmentally friendly chemical processes, reducing waste, and developing eco-friendly products.
-                                </p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="text-xs bg-gray-700 px-2 py-1 rounded">Sustainability</span>
-                                    <span class="text-xs bg-gray-700 px-2 py-1 rounded">Symposium</span>
-                                    <span class="text-xs bg-gray-700 px-2 py-1 rounded">Professional</span>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-sm text-gray-400">
-                                        <i class="fas fa-map-marker-alt mr-1"></i> University Conference Center
-                                    </span>
-                                    <a href="#" class="text-yellow-500 hover:text-yellow-400 transition">
-                                        Learn more <i class="fas fa-arrow-right ml-1"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-
             <!-- Past Events Section -->
             <div class="glass-effect rounded-lg p-8 mt-12">
                 <h2 class="orbitron text-3xl font-bold mb-8 text-center gradient-text">Past Events</h2>
-                
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- Past Event 1 -->
                     <div class="event-card glass-effect rounded-lg p-6">
-                        <h3 class="orbitron text-xl font-bold gradient-text mb-2">Chemistry Career Fair</h3>
-                        <p class="text-gray-400 text-sm mb-4">April 22, 2025</p>
+                        <h3 class="orbitron text-xl font-bold gradient-text mb-2">Molecular Mayhem - YanTra'25</h3>
+                        <p class="text-gray-400 text-sm mb-4">Date: YANTRA–25</p>
                         <p class="text-gray-300 mb-4">
-                            Students connected with industry professionals and explored career opportunities in various chemistry fields.
+                            The Catalyst Club brought the fun and frenzy of chemistry to YanTra'25 with "Molecular Mayhem"! Twelve teams dove into a whirlwind of science, starting with an inspiring guest talk on marine tech. The competition kicked off with a lively quiz, then ramped up to a buzzer round where speed and smarts were key. The final memory game had everyone on their toes, as teams raced to remember and recall chemistry items in the right order. The event wrapped up with big smiles and a group photo to capture the awesome energy of the day!
                         </p>
-                        <a href="#" class="text-yellow-500 hover:text-yellow-400 transition">View gallery</a>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-pink-600 text-white px-2 py-1 rounded">Competition</span>
+                            <span class="text-xs bg-pink-600 text-white px-2 py-1 rounded">Fun</span>
+                            <span class="text-xs bg-pink-600 text-white px-2 py-1 rounded">Teamwork</span>
+                        </div>
+                        <div class="mt-4">
+                            <h4 class="orbitron text-lg font-bold gradient-text mb-2">Gallery</h4>
+                            <!-- Replace with actual image paths -->
+                            <div class="grid grid-cols-2 gap-2">
+                                <img src="Molecular Mayhem pics/pic1.jpg" alt="Molecular Mayhem 1" class="rounded shadow"/>
+                                <img src="Molecular Mayhem pics/pic2.jpg" alt="Molecular Mayhem 2" class="rounded shadow"/>
+                                <!-- Add more images as needed -->
+                            </div>
+                        </div>
                     </div>
-                    
-                    <!-- Past Event 2 -->
-                    <div class="event-card glass-effect rounded-lg p-6">
-                        <h3 class="orbitron text-xl font-bold gradient-text mb-2">Molecular Gastronomy Workshop</h3>
-                        <p class="text-gray-400 text-sm mb-4">March 15, 2025</p>
-                        <p class="text-gray-300 mb-4">
-                            An exciting exploration of the intersection between chemistry and culinary arts with hands-on food experiments.
-                        </p>
-                        <a href="#" class="text-yellow-500 hover:text-yellow-400 transition">View gallery</a>
-                    </div>
+                    <!-- You can add more past events here -->
                 </div>
             </div>
         </div>
